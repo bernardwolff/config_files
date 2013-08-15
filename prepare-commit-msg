@@ -1,0 +1,8 @@
+#!/bin/sh
+BRANCH=$(git branch -a | sed -rn 's/\* (TNEX-[0-9]+).*/\1/p') 
+
+ORIG_COMMIT=`cat $1`
+if [[ $BRANCH != "master" ]] && [[ $ORIG_COMMIT != $BRANCH* ]]; then
+	echo "$BRANCH $ORIG_COMMIT" > "$1"
+fi
+
