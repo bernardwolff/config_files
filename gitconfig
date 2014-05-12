@@ -1,0 +1,25 @@
+[core]
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+	excludesfile = h:/.gitignore
+	pager = less
+	autocrlf = true
+	ignorecase = true
+[diff]
+  mnemonicprefix = true
+	tool = meld
+	external = git-meld
+	guitool = meld
+[difftool "meld"]
+	prompt = false
+  cmd = '/c/Program Files (x86)/Meld/meld/meld.exe' "$LOCAL" "$REMOTE"
+[user]
+	name = Bernard Wolff
+	email = bernard.wolff@tntp.org
+[color]
+	ui = true
+[credential]
+	helper = !\"C:/Program Files (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe\"
+[push]
+	default = simple
+[gui]
+	recentrepo = C:/Projects/Tntp.TeacherTrack2
