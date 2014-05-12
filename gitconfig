@@ -7,11 +7,14 @@
 [diff]
   mnemonicprefix = true
 	tool = meld
-	external = git-meld
+  #external = git-meld
 	guitool = meld
+  prompt = false
 [difftool "meld"]
 	prompt = false
   cmd = '/c/Program Files (x86)/Meld/meld/meld.exe' "$LOCAL" "$REMOTE"
+[difftool]
+	prompt = false
 [user]
 	name = Bernard Wolff
 	email = bernard.wolff@tntp.org
